@@ -1,4 +1,5 @@
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
+var currentDay = moment().format("MMMM Do YYYY")
 
 var currentHour = moment().format("HH");
 
@@ -7,8 +8,12 @@ var idList = JSON.parse(localStorage.getItem("idList"));
 
 
 function init() {
-    renderSchedule();   
+    renderSchedule();     
 };
+
+
+function clearSchedule() {
+}
 
 $("tr").each(function() {
     if (this.id === currentHour) {
