@@ -3,18 +3,14 @@ var currentDay = moment().format("MMMM Do YYYY")
 
 var currentHour = moment().format("HH");
 
-var eventList = JSON.parse(localStorage.getItem("eventList"));
-var idList = JSON.parse(localStorage.getItem("idList"));
+var eventList = JSON.parse(localStorage.getItem("eventList")) || [];
+var idList = JSON.parse(localStorage.getItem("idList")) || [];    
 
-
-function init() {
-    renderSchedule();     
+function init() { 
+    renderSchedule();
 };
 
-
-function clearSchedule() {
-}
-
+//Code to color code the time blocks
 $("tr").each(function() {
     if (this.id === currentHour) {
         $(this).children().eq(1).addClass("present");
@@ -36,7 +32,7 @@ var addEvent = function(event) {
     idList.push(eventId);
     localStorage.setItem("eventList", JSON.stringify(eventList));
     localStorage.setItem("idList", JSON.stringify(idList));
-    // localStorage.setItem ($('#input' + eventID), JSON.stringify(timeSlot.children().val().trim()));
+    
 };
 
 function renderSchedule() {
@@ -52,7 +48,7 @@ function renderSchedule() {
             }
         });
     }
-}
+};
 
 init();
 
