@@ -1,6 +1,5 @@
 # Work Day Scheduler
 
-
 ## User Story
 
 ```md
@@ -31,9 +30,6 @@ THEN the saved events persist
 
 The following animation demonstrates the application functionality:
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./assets/05-third-party-apis-homework-demo.gif)
+![code quiz demo](./assets/images/dayScheduler.png)
 
-- https://csara715.github.io/Bootcamp-WK5-Challenge/
-
-
-
+- https://csara715.github.io/Bootcamp-WK5-Challenge-Day-Scheduler/
